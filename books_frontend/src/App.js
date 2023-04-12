@@ -8,7 +8,7 @@ const App = () => {
     axios
       .get('http://')
       .then(
-        (response) => setPeople(response.data),
+        (response) => setBooks(response.data),
         (err) => console.error(err)
       )
       .catch((error) => console.error(error)
