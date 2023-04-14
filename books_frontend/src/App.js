@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Edit from "./components/edit";
+import Edit from "./components/Edit";
 import Add from "./components/Add";
 
 const App = () => {
@@ -37,6 +37,7 @@ const App = () => {
 
   return (
     <>
+    {}
       {/* <div key={book.id}>
         <h4>Title: {book.title}</h4>
         <h5>Author: {book.author}</h5>
@@ -47,8 +48,8 @@ const App = () => {
           X
         </button>
         <Add />
-      </div>
-       */}
+      </div> */}
+      
       <div>
         {books.map((books) => {
           return (
@@ -56,7 +57,7 @@ const App = () => {
               <h1>{books.AUTHOR}</h1>
               <h1>{books.TITLE}</h1>
               <h1>{books.YEAR}</h1>
-              <h1>{books.IBN}</h1>
+              <h1>{books.ISBN}</h1>
             </div>
           );
         })}

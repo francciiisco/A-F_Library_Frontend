@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Edit = (props) => {
-  let emptyBook = { title: '', author: '', year: '', ibn: '' }
+  let emptyBook = { title: '', author: '', year: '', isbn: '' }
   const [book, setBook] = useState({...props.book})
 
   const handleChange = (event) => {
@@ -44,11 +44,11 @@ const Edit = (props) => {
           />
           <br />
           <br />
-          <label htmlFor="ibn">IBN: </label>
+          <label htmlFor="isbn">ISBN: </label>
           <input
             type="text"
-            name="ibn"
-            value={book.ibn}
+            name="isbn"
+            value={book.isbn}
             onChange={handleChange}
           />
           <input type="submit" />

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 const Add = (props) => {
-  let emptyBook = { title: '', author: '', year: '', ibn: '' }
+  let emptyBook = { title: '', author: '', year: '', isbn: '' }
   const [book, setBook] = useState(emptyBook)
 
 
@@ -29,8 +29,8 @@ const handleSubmit = (event) => {
         <input type="text" name="year" value={book.year} onChange={handleChange}/>
         <br />
         <br />
-        <label htmlFor="ibn">IBN: </label>
-        <input type="text" name="ibn" value={book.ibn} onChange={handleChange}/>
+        <label htmlFor="isbn">ISBN: </label>
+        <input type="text" name="isbn" value={book.isbn} onChange={handleChange}/>
         <input type="submit"/>
       </form>
     </>
