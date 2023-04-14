@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import Edit from './components/edit'
 import Add from './components/Add'
 
 const App = () => {
@@ -17,6 +18,25 @@ const App = () => {
     }
   }
 
+
+const handleDelete = (event) => {
+  axios
+    .delete('http://' + event.target.value)
+    .then((response) => {
+      getBooks()
+    })
+}
+
+
+const handleUpdate = (editBook) => {
+  console.log(editBook)
+  axios
+    .put('http://' + editBook.id, editBook)
+    .then((response) => {
+      getBooks()
+    })
+}
+      
   useEffect(() => {
     getBooks()
   }, [])
