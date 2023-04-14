@@ -38,13 +38,17 @@ const App = () => {
   return (
     <>
       {/* <div key={book.id}>
-        <h4>Title: {book.book_title}</h4>
+        <h4>Title: {book.title}</h4>
         <h5>Author: {book.author}</h5>
+        <h5>Year: {book.year} </h5>
+        <h5>IBN: {book.ibn} </h5>
         <Edit handleUpdate={handleUpdate} book={book} />
         <button onClick={handleDelete} value={book.id}>
           X
         </button>
-      </div> */}
+        <Add />
+      </div>
+       */}
       <div>
         {books.map((books) => {
           return (
