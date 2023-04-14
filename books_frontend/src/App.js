@@ -3,38 +3,36 @@ import axios from 'axios'
 import Add from './components/Add'
 
 const App = () => {
-  let [books, setBooks] = useState([])
-
-  const getBooks = () => {
-    axios
-      .get('http://')
-      .then(
-        (response) => setBooks(response.data),
-        (err) => console.error(err)
-      )
-      .catch((error) => console.error(error)
-      )
+  const URL = 'https://books39.p.rapidapi.com/CZFA4F/books/?rapidapi-key='
+  const key = '023f447a90msh6babfc2e25f744cp16d63ejsn393297bc3bc4'
+  const [books, setBooks] = useState([])
+  // const [searchTerm, setSearchTerm] = useState('')
+  const getBooks = async () => {
+    try {
+      const response = await axios.get(`${URL}${key}`)
+      setBooks(response.data)
+      console.log(books)
+    } catch (err) {
+      console.log(err)
+    }
   }
 
-useEffect(() => {
- getBooks()
-}, [])
+  useEffect(() => {
+    getBooks()
+  }, [])
 
 
   return (
-    <>
-      <h1>Library</h1>
-      <div>
-        {books.map((book) => {
-          return (
-            <div key={book.id}>
-              <h4>Title: {book.book_title}</h4>
-              <h5>Author: {book.author}</h5>
-            </div>
-          )
-        })}
-      </div>
-      <Add />
+    <> 
+    <div>
+    {books.map((books) =>{
+      return(
+        <div>
+          <h1>{books.AUTHOR}</h1>
+        </div>
+      )
+    })}
+    </div>
     </>
   )
 }
