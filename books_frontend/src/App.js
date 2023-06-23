@@ -62,7 +62,7 @@ const App = () => {
                 <tr>
                   <th>Author</th>
                   <th>Title</th>
-                  <th>Year</th>
+                  <th>Years</th>
                   <th>ISBN</th>
                 </tr>
               </thead>
